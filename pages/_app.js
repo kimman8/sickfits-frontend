@@ -5,15 +5,31 @@ import Page from '../components/Page';
 // TODO: swap with our own
 
 import '../components/styles/nprogress.css';
+import { ApolloProvider } from '@apollo/client';
+import withData from '../lib/withData';
+import { func } from 'prop-types';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError´', () => NProgress.done());
 
-export default function MyApp({ Component, pageProps }) {
+function MyApp({ apollo, Component, pageProps }) {
   return (
-    <Page>
-      <Component {...pageProps} />
-    </Page>
+    <ApolloProvider client={apollo}>
+      <Page>
+        <Component {...pageProps} />
+      </Page>
+    </ApolloProvider>
   );
 }
+
+MyApp.getInitialProps = async function ({ Component, ctx }) {
+  let pageProps = {};
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx);
+  }
+  pageProps.query = ctx.query;
+  return { pageProps };
+};
+
+export default withData(MyApp);

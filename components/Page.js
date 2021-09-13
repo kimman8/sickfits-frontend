@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     --offWhite: #ededed;
     --max-width: 1000px;
     --bs: 0 12px 24px 0 rgba(0,0,0,0.09);
+    font-size: 62.5%; //this is equivalent to 10px, also allows user to override  this value in their browser settings
     box-sizing: border-box;
   }
 

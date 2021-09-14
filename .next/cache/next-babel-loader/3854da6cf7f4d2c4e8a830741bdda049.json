@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from './products';","map":{"version":3,"sources":["C:/Users/kim/Desktop/js/sickfits-frontend/sickfits-frontend/pages/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,YAAxB","sourcesContent":["export { default } from './products';\r\n"]},"metadata":{},"sourceType":"module"}

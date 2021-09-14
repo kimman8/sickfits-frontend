@@ -71,6 +71,5 @@ export default function Page({ children }) {
 }
 
 Page.propTypes = {
-  cool: PropTypes.string,
   children: PropTypes.any,
 };

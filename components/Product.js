@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+import formatMoney from '../lib/formatMoney';
 import ItemStyles from './styles/ItemStyles';
 import PriceTag from './styles/PriceTag';
 
@@ -49,7 +50,8 @@ export default function Product({ product }) {
       <KimsTitle>
         <Link href={`/product/${product.id}`}>{product.name}</Link>
       </KimsTitle>
-      <PriceStyle>{product.price}</PriceStyle>
+      <PriceStyle>{formatMoney(product.price)}</PriceStyle>
+      <p>{product.description}</p>
     </ItemStyles>
   );
 }

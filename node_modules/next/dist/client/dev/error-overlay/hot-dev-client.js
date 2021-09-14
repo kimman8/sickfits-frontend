@@ -30,7 +30,7 @@
 // It makes some opinionated choices on top, like adding a syntax error overlay
 // that looks similar to our console output. The error overlay is inspired by:
 // https://github.com/glenjamin/webpack-hot-middleware
-let hadRuntimeError=false;let customHmrEventHandler;function connect(options){DevOverlay.register();(0,_eventsource.getEventSourceWrapper)(options).addMessageListener(event=>{// This is the heartbeat event
+let hadRuntimeError=false;let customHmrEventHandler;function connect(){DevOverlay.register();(0,_eventsource.addMessageListener)(event=>{// This is the heartbeat event
 if(event.data==='\uD83D\uDC93'){return;}try{processMessage(event);}catch(ex){console.warn('Invalid HMR message: '+event.data+'\n'+ex);}});return{subscribeToHmrEvent(handler){customHmrEventHandler=handler;},onUnrecoverableError(){hadRuntimeError=true;}};}// Remember some state related to hot module replacement.
 var isFirstCompilation=true;var mostRecentCompilationHash=null;var hasCompileErrors=false;function clearOutdatedErrors(){// Clean up outdated compile errors, if any.
 if(typeof console!=='undefined'&&typeof console.clear==='function'){if(hasCompileErrors){console.clear();}}}// Successful compilation.

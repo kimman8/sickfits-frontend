@@ -21,6 +21,7 @@ declare type EventCliSessionStarted = {
     imageLoader: string | null;
     trailingSlashEnabled: boolean;
     reactStrictMode: boolean;
+    webpackVersion: number | null;
 };
 declare type NextConfigurationPhase = typeof PHASE_DEVELOPMENT_SERVER | typeof PHASE_PRODUCTION_BUILD | typeof PHASE_EXPORT;
 export declare function eventCliSession(phase: NextConfigurationPhase, dir: string, event: Omit<EventCliSessionStarted, 'nextVersion' | 'nodeVersion' | 'hasNextConfig' | 'buildTarget' | 'hasWebpackConfig' | 'hasBabelConfig' | 'basePathEnabled' | 'i18nEnabled' | 'imageEnabled' | 'locales' | 'localeDomainsCount' | 'localeDetectionEnabled' | 'imageDomainsCount' | 'imageSizes' | 'imageLoader' | 'trailingSlashEnabled' | 'reactStrictMode'>): {

@@ -5,6 +5,7 @@ import { CustomRoutes } from '../lib/load-custom-routes';
 import { __ApiPreviewProps } from '../next-server/server/api-utils';
 import Server, { ServerConstructor } from '../next-server/server/next-server';
 import { Params } from '../next-server/server/router';
+import { NextConfig } from '../next-server/server/config';
 export default class DevServer extends Server {
     private devReady;
     private setDevReady?;
@@ -12,13 +13,13 @@ export default class DevServer extends Server {
     private hotReloader?;
     private isCustomServer;
     protected sortedRoutes?: string[];
-    protected staticPathsWorker: import('jest-worker').default & {
+    protected staticPathsWorker: import('jest-worker').Worker & {
         loadStaticPaths: typeof import('./static-paths-worker').loadStaticPaths;
     };
     constructor(options: ServerConstructor & {
+        conf: NextConfig;
         isNextDevCommand?: boolean;
     });
-    protected currentPhase(): string;
     protected readBuildId(): string;
     addExportPathMapRoutes(): Promise<void>;
     startWatcher(): Promise<void>;
@@ -34,7 +35,11 @@ export default class DevServer extends Server {
     generateRoutes(): {
         basePath: string;
         headers: import("../next-server/server/router").Route[];
-        rewrites: import("../next-server/server/router").Route[];
+        rewrites: {
+            beforeFiles: import("../next-server/server/router").Route[];
+            afterFiles: import("../next-server/server/router").Route[];
+            fallback: import("../next-server/server/router").Route[];
+        };
         redirects: import("../next-server/server/router").Route[];
         catchAllRoute: import("../next-server/server/router").Route;
         pageChecker: import("../next-server/server/router").PageChecker;

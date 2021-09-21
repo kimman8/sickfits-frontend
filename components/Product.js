@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import formatMoney from '../lib/formatMoney';
+import DeleteProduct from './DeleteProduct';
 import ItemStyles from './styles/ItemStyles';
-import PriceTag from './styles/PriceTag';
 
 const KimsTitle = styled.h3`
   margin: 0 1rem;
@@ -52,6 +52,19 @@ export default function Product({ product }) {
       </KimsTitle>
       <PriceStyle>{formatMoney(product.price)}</PriceStyle>
       <p>{product.description}</p>
+      <div className="buttonList">
+        <Link
+          href={{
+            pathname: 'update',
+            query: {
+              id: product.id,
+            },
+          }}
+        >
+          Edit ✏️
+        </Link>
+        <DeleteProduct id={product.id}>Delete</DeleteProduct>
+      </div>
     </ItemStyles>
   );
 }

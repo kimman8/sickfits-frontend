@@ -6,5 +6,6 @@ export declare type ImageConfig = {
     loader: LoaderValue;
     path: string;
     domains?: string[];
+    enableBlurryPlaceholder: boolean;
 };
 export declare const imageConfigDefault: ImageConfig;

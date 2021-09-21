@@ -1,8 +1,6 @@
 import { IConformanceTestResult, IWebpackConformanceTest } from '../TestInterface';
-export interface GranularChunksConformanceCheck extends IWebpackConformanceTest {
+export declare class GranularChunksConformanceCheck implements IWebpackConformanceTest {
     granularChunksConfig: any;
-}
-export declare class GranularChunksConformanceCheck {
     constructor(granularChunksConfig: any);
     buildStared(options: any): IConformanceTestResult;
 }

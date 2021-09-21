@@ -38,7 +38,7 @@ const Form = styled.form`
   }
   button,
   input[type='submit'] {
-    width: auto;
+    /* width: auto; */
     background: red;
     color: white;
     border: 0;

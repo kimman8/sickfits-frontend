@@ -1,43 +1,10 @@
 import Link from 'next/link';
-import styled from 'styled-components';
+import ItemStyles from './styles/ItemStyles';
+import Title from './styles/Title';
+import PriceTag from './styles/PriceTag';
 import formatMoney from '../lib/formatMoney';
 import DeleteProduct from './DeleteProduct';
-import ItemStyles from './styles/ItemStyles';
-
-const KimsTitle = styled.h3`
-  margin: 0 1rem;
-  text-align: center;
-  position: relative;
-  transform: skew(-5deg) rotate(-1deg);
-  margin-top: -3rem;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
-
-  a {
-    background: var(--red);
-    padding: 0 1rem;
-    display: inline;
-    line-height: 1.3;
-    color: white;
-    font-size: 4rem;
-  }
-`;
-
-const PriceStyle = styled.h4`
-  transform: rotate(3deg);
-  background: var(--red);
-  position: absolute;
-  color: white;
-  font-size: 3rem;
-  margin: 0;
-  text-align: center;
-  padding: 0 1rem;
-  display: inline-block;
-  font-weight: 600;
-  line-height: 1;
-  padding: 5px;
-  top: -3px;
-  right: -3px;
-`;
+import AddToCart from './AddToCart';
 
 export default function Product({ product }) {
   return (
@@ -46,16 +13,15 @@ export default function Product({ product }) {
         src={product?.photo?.image?.publicUrlTransformed}
         alt={product.name}
       />
-
-      <KimsTitle>
+      <Title>
         <Link href={`/product/${product.id}`}>{product.name}</Link>
-      </KimsTitle>
-      <PriceStyle>{formatMoney(product.price)}</PriceStyle>
+      </Title>
+      <PriceTag>{formatMoney(product.price)}</PriceTag>
       <p>{product.description}</p>
       <div className="buttonList">
         <Link
           href={{
-            pathname: 'update',
+            pathname: '/update',
             query: {
               id: product.id,
             },
@@ -63,6 +29,7 @@ export default function Product({ product }) {
         >
           Edit ✏️
         </Link>
+        <AddToCart id={product.id} />
         <DeleteProduct id={product.id}>Delete</DeleteProduct>
       </div>
     </ItemStyles>

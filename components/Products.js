@@ -32,7 +32,6 @@ export default function Products({ page }) {
       first: perPage,
     },
   });
-  console.log(data);
   if (loading) {
     return <p>loading..</p>;
   }

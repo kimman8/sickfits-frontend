@@ -9,7 +9,7 @@ const Dot = styled.div`
   line-height: 2rem;
   min-width: 3rem;
   margin-left: 1rem;
-  font-feature-settings: 'tnum';
+  font-feature-settings: 'tnum'; //makes all numbers the exact  same width
   font-variant-numeric: tabular-nums;
 `;
 
@@ -26,6 +26,7 @@ const AnimationStyles = styled.span`
   }
   .count-enter-active {
     transform: rotateX(0);
+    background: green;
   }
   .count-exit {
     top: 0;
@@ -33,6 +34,7 @@ const AnimationStyles = styled.span`
     transform: rotateX(0);
   }
   .count-exit-active {
+    background: pink;
     transform: scale(4) rotateX(0.5turn);
   }
 `;
@@ -44,7 +46,7 @@ export default function CartCount({ count }) {
         <CSSTransition
           unmountOnExit
           className="count"
-          classNames="count"
+          classNames="count" // count-exit count-enter etc
           key={count}
           timeout={{ enter: 400, exit: 400 }}
         >

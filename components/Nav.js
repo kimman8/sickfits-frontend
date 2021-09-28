@@ -11,7 +11,7 @@ export default function Nav() {
 
   return (
     <NavStyles>
-      {process.env.NEXT_PUBLIC_STRIPE_KEY}
+      {/* {process.env.NEXT_PUBLIC_STRIPE_KEY} */}
       <Link href="/products">Products</Link>
       {user && (
         <>

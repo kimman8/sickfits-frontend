@@ -12,12 +12,7 @@
 
 <div align="center">
 
-[🚀&nbsp; date-fns v2 is out](#docs)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[📖&nbsp; Documentation](https://date-fns.org/docs/)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[🧑‍💻&nbsp; JavaScript Jobs](#javascript-jobs-by-date-fns)
-
-  <sub>
-
-Powering **>500k Projects** & Generating **~7 Million Downloads/Week**
-</sub>
+[📖&nbsp; Documentation](https://date-fns.org/docs/Getting-Started/)&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;[🧑‍💻&nbsp; JavaScript Jobs](https://jobs.date-fns.org/)
 
 </div>
 
@@ -25,7 +20,7 @@ Powering **>500k Projects** & Generating **~7 Million Downloads/Week**
 
 # It's like [Lodash](https://lodash.com) for dates
 
-- It has [**180+ functions** for all occasions](https://date-fns.org/docs/).
+- It has [**200+ functions** for all occasions](https://date-fns.org/docs/Getting-Started/).
 - **Modular**: Pick what you need. Works with webpack, Browserify, or Rollup and also supports tree-shaking.
 - **Native dates**: Uses existing native type. It doesn't extend core objects for safety's sake.
 - **Immutable & Pure**: Built using pure functions and always returns a new date instance.
@@ -65,20 +60,6 @@ yarn add date-fns
 
 [See date-fns.org](https://date-fns.org/) for more details, API,
 and other docs.
-
-## JavaScript jobs by date-fns
-
-<!-- START OF README-JOB SECTION -->
-
-We help people find their JavaScript Dream-Job. Learn more about it <b><a href="https://jobs.date-fns.org/">here</a></b>.
-
-<a href="https://fetch.readme-jobs.com/rmj-rec1fZdbrN6qruPot/1/link" target="_blank"><img src="https://fetch.readme-jobs.com/rmj-rec1fZdbrN6qruPot/1/ad" width="270"></a>
-<a href="https://fetch.readme-jobs.com/rmj-rec1fZdbrN6qruPot/2/link" target="_blank"><img src="https://fetch.readme-jobs.com/rmj-rec1fZdbrN6qruPot/2/ad" width="270"></a>
-<a href="https://fetch.readme-jobs.com/rmj-rec1fZdbrN6qruPot/3/link" target="_blank"><img src="https://fetch.readme-jobs.com/rmj-rec1fZdbrN6qruPot/3/ad" width="270"></a>
-
-👋&nbsp; Know someone who's looking for JavaScript devs? [Recommend us a job!](https://jobs.date-fns.org/#recommend)
-<br>
-✉️&nbsp; Get jobs worth sharing to your email! [Subscribe to the newsletter](https://jobs.date-fns.org).
 
 <br />
 <!-- END OF README-JOB SECTION -->

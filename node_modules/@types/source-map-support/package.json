@@ -1,0 +1,42 @@
+{
+    "name": "@types/source-map-support",
+    "version": "0.5.4",
+    "description": "TypeScript definitions for source-map-support",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/source-map-support",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Bart van der Schoor",
+            "url": "https://github.com/Bartvds",
+            "githubUsername": "Bartvds"
+        },
+        {
+            "name": "Jason Cheatham",
+            "url": "https://github.com/jason0x43",
+            "githubUsername": "jason0x43"
+        },
+        {
+            "name": "Alcedo Nathaniel De Guzman Jr",
+            "url": "https://github.com/natealcedo",
+            "githubUsername": "natealcedo"
+        },
+        {
+            "name": "Griffin Yourick",
+            "url": "https://github.com/tough-griff",
+            "githubUsername": "tough-griff"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/source-map-support"
+    },
+    "scripts": {},
+    "dependencies": {
+        "source-map": "^0.6.0"
+    },
+    "typesPublisherContentHash": "c35c60bdac5a616d5882a30010104dbb9aeb2ccca4c89991681124768e72fb59",
+    "typeScriptVersion": "3.6"
+}

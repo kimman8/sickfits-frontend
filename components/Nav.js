@@ -8,10 +8,10 @@ import { useUser } from './User';
 export default function Nav() {
   const user = useUser();
   const { openCart } = useCart();
-  console.log({ user });
 
   return (
     <NavStyles>
+      {process.env.NEXT_PUBLIC_STRIPE_KEY}
       <Link href="/products">Products</Link>
       {user && (
         <>

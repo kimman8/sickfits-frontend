@@ -36,7 +36,6 @@ export default function Search() {
     }
   );
   const items = data?.searchTerms || [];
-  console.log(items);
   const findItemsButChill = debounce(findItems, 350); // debounce func is ran every 350ms
   resetIdCounter();
   const {
@@ -50,7 +49,6 @@ export default function Search() {
   } = useCombobox({
     items,
     onInputValueChange() {
-      console.log('input changed!');
       findItemsButChill({
         variables: {
           searchTerm: inputValue,

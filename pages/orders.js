@@ -1,7 +1,9 @@
+import SingleOrder from '../components/SingleOrder';
+
 export default function OrderPage() {
   return (
     <div>
-      <p>Order!</p>
+      <SingleOrder />
     </div>
   );
 }

@@ -24,15 +24,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/order/[id]": [
+    "/products": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/order/[id].js"
+      "static/chunks/pages/products.js"
     ],
-    "/orders": [
+    "/sell": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/orders.js"
+      "static/chunks/pages/sell.js"
     ]
   },
   "ampFirstPages": []

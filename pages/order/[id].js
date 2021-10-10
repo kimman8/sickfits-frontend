@@ -1,10 +1,8 @@
 import React from 'react';
 import { gql, useQuery } from '@apollo/client';
 import Head from 'next/head';
-import styled from 'styled-components';
 import OrderStyles from '../../components/styles/OrderStyles';
 import DisplayError from '../../components/ErrorMessage';
-import SingleOrder from '../../components/SingleOrder';
 import formatMoney from '../../lib/formatMoney';
 
 const SINGLE_ORDER_QUERY = gql`
@@ -63,15 +61,21 @@ export default function SingleOrderPage({ query }) {
         <span>ItemCount:</span>
         <span>{order.items.length}</span>
       </p>
-      <img
-        src={order?.items?.photo?.image.publicUrlTransformed}
-        alt={order?.photo?.altText}
-      />
-      <div className="details">
-        <h2>{order.name}</h2>
-        <p>{order.description}</p>
-        <p>{formatMoney(order.price)}</p>
-      </div>
+      {order.items.map((item) => (
+        <div className="order-item" key={item.id}>
+          <img
+            src={item.photo.image.publicUrlTransformed}
+            alt={item.photo.altText}
+          />
+          <div className="item-details">
+            <h2>{item.name}</h2>
+            <p>Qty: {item.quantity}</p>
+            <p>Each: {formatMoney(item.price)}</p>
+            <p>Subtotal: {formatMoney(item.price * item.quantity)}</p>
+            <p>{item.description}</p>
+          </div>
+        </div>
+      ))}
     </OrderStyles>
   );
   // return <SingleOrder id={query.id} />;

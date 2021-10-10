@@ -23,7 +23,7 @@ export default function AddToCart({ id }) {
   }
   return (
     <button type="button" onClick={addAndOpenCart} disabled={loading}>
-      Add{loading && 'ing'} to Cart🛒
+      Add{loading && 'ing'} to Cart 🛒
     </button>
   );
 }

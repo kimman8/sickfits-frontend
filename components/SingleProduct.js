@@ -42,7 +42,7 @@ export default function SingleProduct({ id }) {
       id,
     },
   });
-  if (loading) return <p>loading</p>;
+  if (loading) return <p>loading...</p>;
   if (error) return <DisplayError error={error} />;
   const { Product } = data;
   return (

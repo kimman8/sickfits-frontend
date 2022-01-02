@@ -95,3 +95,4 @@ export default function SignUp() {
     </Form>
   );
 }
+export { SIGNUP_MUTATION };

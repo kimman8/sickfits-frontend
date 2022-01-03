@@ -31,10 +31,10 @@ const mocks = [
     },
   },
   // current user mock
-  {
-    request: { query: CURRENT_USER_QUERY },
-    result: { data: { authenticatedItem: me } },
-  },
+  // {
+  //   request: { query: CURRENT_USER_QUERY },
+  //   result: { data: { authenticatedItem: me } },
+  // },
 ];
 
 describe('<SignUp/>', () => {
@@ -58,6 +58,9 @@ describe('<SignUp/>', () => {
     await userEvent.type(screen.getByPlaceholderText(/password/i), password);
     // click the submit
     await userEvent.click(screen.getByText('Sign Up'));
+    await screen.findByText(
+      `Signed up using ${me.email} - Please go ahead and sign in!`
+    );
     debug();
   });
 });
